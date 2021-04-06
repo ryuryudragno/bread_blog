@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link rel="stylesheet" href="/static/common.css">
+    <link rel="stylesheet" href="/static/style.css">
+    
+  </head>
+
+  <body>
+    <!-- 見出し -->
+    <h1 class = "text-center">BestYoutuber</h1>
+
+    <div class = "border border-info rounded p-2">
+      <!-- 入力フォーム -->
+      <form class = "form-group" method="post" enctype="multipart/form-data">
+        
+        <!-- ファイルの選択 -->
+        <label for = "thumbnail">サムネイル等　その人たちの写真！</label>
+        <input class = "form-control width80" type="file" name="image_data" id = "thumbnail">
+        
+        <!-- テキストの入力 -->
+        <label for = "youtuber">Youtuber名やコメント</label>
+        <input class = "form-control" type="text" name="title" id = "youtuber">
+        <!-- 送信ボタン -->
+        <button type="submit">投稿！</button>
+      </form>
+    </div>
+      
+
+    <!-- テンプレート：記事を繰り返し表示 -->
+    {% for article in articles | reverse %}
+    <!-- 内容を表示する箱-->
+    <article>
+      <!-- 画像を表示 -->
+      <img src="/uploads/{{article['image_name']}}">
+      <!-- 時間を表示 -->
+      <time>{{article['time']}}</time>
+      <!-- テキストを表示 -->
+      <h2>{{article['title']}}</h2>
+    </article>
+    <!-- テンプレート：記事の繰り返しを終了 -->
+    {% endfor %}
+
+  </body>
+</html>

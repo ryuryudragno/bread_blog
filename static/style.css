@@ -1,0 +1,95 @@
+/* ===== Webサイト全体のスタイル ===== */
+
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Mincho');
+/* Webサイト全体 */
+body {
+  background: url(wood-light.png);
+  background-size:cover;
+  padding: 20px;
+}
+
+
+/* ===== 記事の一覧ページのスタイル ===== */
+/* タイトルの見出し */
+h1 {
+  color: rgb(0, 200, 200);
+  font-size: 50px;
+  font-family: lobster;
+  margin-bottom: 10px;
+}
+
+/* 記事の箱 */
+article {
+  background: white;
+  width: 300px;
+  padding: 10px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  display:inline-block;
+}
+
+/* 記事の見出し */
+h2 {
+  font-size: 16px;
+}
+
+/* 記事の画像 */
+img {
+  max-width: 100%;
+}
+
+/* 記事の投稿時間 */
+time {
+  color: silver;
+  font-size: 10px;
+}
+
+
+/* ===== 記事の投稿ページのスタイル ===== */
+/* 文字の入力フィールド */
+input {
+  width: 250px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="text"]:focus{
+ border-color: #C0D85C;
+ box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+}
+
+/* 送信ボタン */
+button {
+  color: white;
+  background: rgb(0, 200, 200);
+  padding: 5px;
+  margin-bottom: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* ボタンにさわったとき */
+button:hover {
+  background: orange;
+  cursor: pointer;
+}
+
+/* フッター */
+footer {
+  clear: both;
+}
+
+footer a {
+  color: black;
+  font-size: 12px;
+}
+
+
+.width80{
+  width:80%;
+}
+
+label{
+  font-family: 'Sawarabi Mincho', sans-serif;
+  font-weight:bold;
+}
